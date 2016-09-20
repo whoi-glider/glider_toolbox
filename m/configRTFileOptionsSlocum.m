@@ -109,9 +109,12 @@ function slocum_options = configRTFileOptionsSlocum()
     'sci_flntu_chlor_units'
     'sci_flntu_turb_units'
     'sci_flntu_timestamp'
-    'sci_oxy3835_oxygen'
-    'sci_oxy3835_saturation'
-    'sci_oxy3835_timestamp'
+    'sci_oxy4_oxygen'
+    'sci_oxy4_saturation'
+    'sci_oxy4_calphase'
+    %'sci_oxy3835_oxygen'
+    %'sci_oxy3835_saturation'
+    %'sci_oxy3835_timestamp'
   };
   
 end

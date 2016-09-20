@@ -108,12 +108,16 @@ function slocum_options = configDTFileOptionsSlocum()
     'sci_water_pressure'
     'sci_water_cond'
     'sci_water_temp'
-    'sci_flntu_chlor_units'
-    'sci_flntu_turb_units'
-    'sci_flntu_timestamp'
-    'sci_oxy3835_oxygen'
-    'sci_oxy3835_saturation'
-    'sci_oxy3835_timestamp'
+    'sci_bb2f_fluor'
+    'sci_bb2f_b470'
+    'sci_bb2f_b700'
+    'sci_bb2f_timestamp'
+    'sci_oxy4_oxygen'
+    'sci_oxy4_saturation'
+    'sci_oxy4_calphase'
+    'sci_oxy4_temp'
+    'sci_oxy4_timestamp'
+    'sci_suna_nitrate_um'
   };
   
 end

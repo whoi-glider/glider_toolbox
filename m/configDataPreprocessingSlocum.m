@@ -77,16 +77,19 @@ function preprocessing_options = configDataPreprocessingSlocum()
   preprocessing_options.ctd_list(2).time         = [];
   preprocessing_options.ctd_list(2).pressure_conversion = @bar2dbar;
 
-  preprocessing_options.oxygen_list(1).oxygen_concentration = 'sci_oxy3835_oxygen';
-  preprocessing_options.oxygen_list(1).oxygen_saturation    = 'sci_oxy3835_saturation';
-  preprocessing_options.oxygen_list(1).temperature          = 'sci_oxy3835_temp';
-  preprocessing_options.oxygen_list(1).time                 = 'sci_oxy3835_timestamp';
+  preprocessing_options.oxygen_list(1).oxygen_concentration = 'sci_oxy4_oxygen';
+  preprocessing_options.oxygen_list(1).oxygen_saturation    = 'sci_oxy4_saturation';
+  preprocessing_options.oxygen_list(1).temperature          = 'sci_oxy4_temp';
+  preprocessing_options.oxygen_list(1).oxygen_calphase      = 'sci_oxy4_calphase';
+  preprocessing_options.oxygen_list(1).time                 = 'sci_oxy4_timestamp';
   
-  preprocessing_options.optics_list(1).chlorophyll = 'sci_flntu_chlor_units';
-  preprocessing_options.optics_list(1).turbidity   = 'sci_flntu_turb_units';
-  preprocessing_options.optics_list(1).time        = 'sci_flntu_timestamp';
+  
+  preprocessing_options.optics_list(1).chlorophyll  = 'sci_bb2f_fluor';
+  preprocessing_options.optics_list(1).scatter_470        = 'sci_bb2f_b470';
+  preprocessing_options.optics_list(1).scatter_700        = 'sci_bb2f_b700';
   
   preprocessing_options.extra_sensor_list = struct();
+  preprocessing_options.extra_sensor_list.suna_list(1).nitrate  = 'sci_suna_nitrate_um';
     
 end
 

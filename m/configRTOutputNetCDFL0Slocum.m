@@ -533,6 +533,37 @@ function ncl0_info = configRTOutputNetCDFL0Slocum()
     'units'         'seconds since 1970-01-01 00:00:00 +00:00'
     '_FillValue'    default_fill_value };
 
+  % OXY4XXX sensor.
+  var_attr_list.sci_oxy4_oxygen = {
+    'long_name'     'oxygen concentration'
+    'standard_name' 'mole_concentration_of_dissolved_molecular_oxygen_in_sea_water'
+    'units'         'umol l-1'  
+    '_FillValue'    default_fill_value };
+
+  var_attr_list.sci_oxy4_saturation = {
+    'long_name'     'oxygen saturation'
+    'standard_name' 'fractional_saturation_of_oxygen_in_sea_water'
+    'units'         '1'  
+    '_FillValue'    default_fill_value };
+
+  var_attr_list.sci_oxy4_calphase = {
+    'long_name'     'oxygen calphase'
+    'standard_name' 'calphase_of_sensor_for_oxygen_in_sea_water'
+    'units'         '1'  
+    '_FillValue'    default_fill_value };
+
+  var_attr_list.sci_oxy4_temp = {
+    'long_name'     'temperature'
+    'standard_name' 'temperature_of_sensor_for_oxygen_in_sea_water'
+    'units'         'Celsius'  
+    '_FillValue'    default_fill_value };
+  
+  var_attr_list.sci_oxy4_timestamp = {
+    'long_name'     'epoch time (OXY4 sensor)'
+    'standard_name' 'time'
+    'units'         'seconds since 1970-01-01 00:00:00 +00:00'
+    '_FillValue'    default_fill_value };
+
 
   %% Define global attributes (they may be overwritten with deployment values).
   % To define the global attributes easily and readably, add them to this
