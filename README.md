@@ -1,3 +1,7 @@
+Important announcement
+--------
+Due to a mistake, we uploaded an unstable version of our project. This version was in the cloud between March 13th and June 14th of the current year. We have checked that none of our followers had cloned this wrong version. Now, we have reverted (reset --hard) to the previous stable version, the one in June 6th 2016. Should any of you need some help or any clarification, please feel free to contact us. Our apologies.
+
 glider_toolbox
 ==============
 
@@ -22,10 +26,12 @@ The following features are already implemented in the glider toolbox:
   - Support for different glider models:
       - Slocum G1 and G2
       - Seaglider
+      - SeaExplorer
   - Deployment metadata gathering from virtually any database.
   - File retrieval from multiple dockservers/basestations for real time processing.
   - Improved Slocum raw data loading from ascii files (`.dba`).
   - Improved Seaglider raw data loading from ascii files (`.log` and `.eng`).
+  - SeaExplorer raw data loading from ascii files (`.gli` and `.pld`).
   - Data processing, including:
       - unit conversions
       - factory calibrations
@@ -41,7 +47,7 @@ The following features are already implemented in the glider toolbox:
     - parameters for data gridding
     - customizable standard NetCDF product and figure outputs
 
-The following features are planned:
+The following features are planned or in development:
 
   - automatic quality control of processed data.
 
@@ -87,10 +93,12 @@ developed to automatically process the data from a glider fleet is not needed:
 
   - Slocum data file API:
     [`dba2mat`][dba2mat], [`dbacat`][dbacat], and [`dbamerge`][dbamerge]
-  - Seaglider data file API: 
-    [`sglog2mat`][sglog2mat], [`sglogcat`][sglogcat], 
-    [`sgeng2mat`][sgeng2mat], [`sgengcat`][sgengcat], 
+  - Seaglider data file API:
+    [`sglog2mat`][sglog2mat], [`sglogcat`][sglogcat],
+    [`sgeng2mat`][sgeng2mat], [`sgengcat`][sgengcat],
     and [`sglogenmerge`][sglogengmerge]
+  - SeaExplorer data file API:
+    [`sx2mat`][sx2mat], [`sxcat`][sxcat], and [`sxmerge`][sxmerge]
   - More convenient [NetCDF interface][netcdf_dsl]:
     [`loadnc`][loadnc] and [`savenc`][savenc]
   - RFC-compliant [JSON interface][json_rfc]:
@@ -111,6 +119,9 @@ developed to automatically process the data from a glider fleet is not needed:
   [sgeng2mat]: http://www.socib.es/users/glider/glider_toolbox/doc/m/reading_tools/sgeng2mat
   [sgengcat]: http://www.socib.es/users/glider/glider_toolbox/doc/m/reading_tools/sgengcat
   [sglogengmerge]: http://www.socib.es/users/glider/glider_toolbox/doc/m/reading_tools/sglogengmerge
+  [sx2mat]: http://www.socib.es/users/glider/glider_toolbox/doc/m/reading_tools/sx2mat
+  [sxcat]: http://www.socib.es/users/glider/glider_toolbox/doc/m/reading_tools/sxcat
+  [sxmerge]: http://www.socib.es/users/glider/glider_toolbox/doc/m/reading_tools/sxmerge
   [netcdf_dsl]: http://repository.socib.es/repository/entry/show/Top/Public+Staff/jbeltran/Octave+and+MATLAB/Octave+and+MATLAB+notes#Load%20and%20save%20data%20in%20NetCDF%20format
   [loadnc]: http://www.socib.es/users/glider/glider_toolbox/doc/m/common_tools/loadnc
   [savenc]: http://www.socib.es/users/glider/glider_toolbox/doc/m/common_tools/savenc
@@ -154,7 +165,7 @@ and [SOCIB][socib] by Tomeu Garau. He is the true glider man.
 Copyright
 ---------
 
-Copyright (C) 2013-2015
+Copyright (C) 2013-2016
 ICTS SOCIB - Servei d'observació i predicció costaner de les Illes Balears
 <http://www.socib.es>
 
