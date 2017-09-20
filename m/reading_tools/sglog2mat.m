@@ -20,16 +20,16 @@ function [meta, data] = sglog2mat(filename, varargin)
 %          'array': DATA is a struct with a scalar field for each scalar
 %            parameter and an array or cell array field for each non-scalar
 %            parameter. Values of non-scalar parameters are in the column order
-%            given by the corresponding field of the COLUMNS metadata field.
-%          'merged': DATA is a struct with a scalar or column vector field
-%            for each scalar parameter or entry of a non-scalar parameter.
+%            given by the corresponding field of the PARAMS metadata field.
+%          'merged': DATA is a struct with a scalar or column vector field for
+%            each scalar parameter or entry of a non-scalar parameter.
 %            For scalar parameters, the field is named after the parameter,
 %            while for non-scalar parameters the field names are the parameter
 %            name and its field names, separated by underscore.
 %          'struct': DATA is a struct with a scalar field for each scalar
 %            parameter and a struct array for each non-scalar parameter.
-%            The fields of the non-scalar parameters are given by the
-%            corresponding field of the COLUMNS metadata field.
+%            The fields of the non-scalar parameters are given by the 
+%            corresponding field of the PARAMS metadata field.
 %        Default value: 'array'
 %      PARAMS: parameter filtering list.
 %        String cell array with the names of the parameters of interest.
@@ -43,8 +43,8 @@ function [meta, data] = sglog2mat(filename, varargin)
 %        will be present in output.
 %        Default value: 'all' (do not perform parameter filtering).
 %
-%    META has the following fields based on the tags of the header
-%    and the content of some metaparameters:
+%    META has the following fields based on the tags of the header and the
+%    content of some metaparameters:
 %      HEADERS: a struct with the initial tags in the log file:
 %        VERSION: string with the version tag in log header.
 %        GLIDER : string with the glider id tag in log header.
@@ -110,7 +110,7 @@ function [meta, data] = sglog2mat(filename, varargin)
 %  Authors:
 %    Joan Pau Beltran  <joanpau.beltran@socib.cat>
 
-%  Copyright (C) 2014-2015
+%  Copyright (C) 2013-2016
 %  ICTS SOCIB - Servei d'observacio i prediccio costaner de les Illes Balears
 %  <http://www.socib.es>
 %
@@ -437,6 +437,6 @@ switch output_format
     otherwise
         error('glider_toolbox:sglog2mat:InvalidFormat', ...
             'Invalid output format: %s.', output_format)
-end
+  end
 
 end
