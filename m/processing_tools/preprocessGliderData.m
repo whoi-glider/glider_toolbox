@@ -894,6 +894,8 @@ function [data_pre, meta_pre] = preprocessGliderData(data_raw, meta_raw, varargi
     if isfield(oxygen_choice_list, 'oxygen_calphase')
       calphase_oxygen_field = oxygen_choice.oxygen_calphase;
     end
+    oxy_con_field = 'sci_oxy4_oxygen';
+    oxy_sat_field = 'sci_oxy4_saturation';
     if all(ismember({oxy_con_field oxy_sat_field}, field_list)) ...
         && any(data_raw.(oxy_con_field) > 0) ...
         && any(data_raw.(oxy_sat_field) > 0)
@@ -939,7 +941,7 @@ function [data_pre, meta_pre] = preprocessGliderData(data_raw, meta_raw, varargi
   % Find preferred valid fluorescence and turbidity sensor available in list of 
   % sensor fields, if any.
   optics_choice_list = options.optics_list;
-  optics_variables = {'chlorophyll' 'turbidity' 'cdom' 'scatter_650' 'scatter_470','scatter_700'};
+  optics_variables = {'chlorophyll' 'turbidity' 'cdom' 'backscatter' 'scatter_650' 'scatter_470','scatter_700'};
   for optics_choice_idx = 1:numel(optics_choice_list)
     optics_choice = optics_choice_list(optics_choice_idx);
     optics_variables_select = ...

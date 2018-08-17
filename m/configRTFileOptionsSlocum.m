@@ -101,8 +101,8 @@ function slocum_options = configRTFileOptionsSlocum()
     'm_pitch'
     'm_heading'
     'm_depth'
-    'm_final_water_vx'
-    'm_final_water_vy'
+    'm_water_vx'
+    'm_water_vy'
     'sci_m_present_time'
     'sci_ctd41cp_timestamp'
     'sci_water_pressure'
@@ -112,19 +112,16 @@ function slocum_options = configRTFileOptionsSlocum()
     'sci_flntu_turb_units'
     'sci_flntu_temp'
     'sci_flntu_timestamp'
-<<<<<<< HEAD
     'sci_oxy4_oxygen'
     'sci_oxy4_saturation'
     'sci_oxy4_calphase'
+    'sci_flbbcd_chlor_units'
+    'sci_flbbcd_bb_units'
+    'sci_flbbcd_cdom_units'
     %'sci_oxy3835_oxygen'
     %'sci_oxy3835_saturation'
     %'sci_oxy3835_timestamp'
-=======
-    'sci_oxy3835_oxygen'
-    'sci_oxy3835_saturation'
-    'sci_oxy3835_temp'
-    'sci_oxy3835_timestamp'
->>>>>>> socib/master
+
   };
   
 end
